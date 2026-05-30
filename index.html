@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Franciscus Roofing | Cleveland's Trusted Roofer Since 1991</title>
+  <meta name="description" content="Franciscus Roofing - Cleveland's veteran-owned, BBB A+ rated roofing company with 34+ years and 18,000+ satisfied customers. Free estimates. Open 24/7. Call (216) 474-0046."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #C0392B;
+      --dark: #0D0D0D;
+      --charcoal: #1A1A1A;
+      --mid: #2C2C2C;
+      --white: #FFFFFF;
+      --accent: #E74C3C;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--white); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(13,13,13,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(192,57,43,0.3);
+      padding: 0 5%; display: flex; align-items: center;
+      justify-content: space-between; height: 70px;
+    }
+    .nav-logo { font-size: 1.35rem; font-weight: 900; letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
+    .nav-cta:hover { background: var(--accent) !important; color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(to bottom, rgba(13,13,13,0.82) 0%, rgba(13,13,13,0.62) 40%, rgba(13,13,13,0.97) 100%),
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center; padding: 0 5%; padding-top: 70px;
+    }
+    .hero-content { max-width: 740px; }
+    .hero-badges { display: flex; gap: 0.65rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(192,57,43,0.12); border: 1px solid rgba(192,57,43,0.35);
+      color: #FF8080; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 100px;
+    }
+    .badge-gold { background: rgba(241,196,15,0.1); border-color: rgba(241,196,15,0.35); color: #F1C40F; }
+    .badge-green { background: rgba(39,174,96,0.1); border-color: rgba(39,174,96,0.35); color: #6FCF97; }
+    .hero h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 1.2rem; }
+    .hero h1 span { color: var(--red); }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.68); margin-bottom: 2rem; max-width: 560px; }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--red); color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: transform 0.2s, background 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.3); font-weight: 600; font-size: 1rem; text-decoration: none; transition: border-color 0.2s, transform 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--red); transform: translateY(-2px); }
+    .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap; }
+    .stat-num { font-size: 2.1rem; font-weight: 900; }
+    .stat-label { font-size: 0.76rem; color: rgba(255,255,255,0.42); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--red); padding: 0.9rem 5%; display: flex; justify-content: center; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 700; color: rgba(255,255,255,0.95); }
+    .trust-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.25); }
+
+    /* SERVICES */
+    .services { padding: 6rem 5%; background: var(--charcoal); }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-label { color: var(--red); font-size: 0.73rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 0.75rem; }
+    .section-header h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; letter-spacing: -0.5px; }
+    .section-header p { color: rgba(255,255,255,0.5); margin-top: 0.75rem; font-size: 1rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
+    .service-card { background: var(--mid); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 1.85rem; transition: transform 0.2s, border-color 0.2s; }
+    .service-card:hover { transform: translateY(-4px); border-color: rgba(192,57,43,0.4); }
+    .service-icon { font-size: 2rem; margin-bottom: 0.85rem; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.45rem; }
+    .service-card p { color: rgba(255,255,255,0.52); font-size: 0.88rem; }
+
+    /* ABOUT */
+    .about { padding: 6rem 5%; background: var(--dark); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+    .about-text h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; letter-spacing: -0.5px; margin-bottom: 1rem; }
+    .about-text h2 span { color: var(--red); }
+    .about-text p { color: rgba(255,255,255,0.62); margin-bottom: 1.1rem; font-size: 0.97rem; }
+    .about-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.25rem; }
+    .about-list li { display: flex; align-items: flex-start; gap: 0.75rem; color: rgba(255,255,255,0.8); font-size: 0.93rem; }
+    .check { width: 20px; height: 20px; background: rgba(192,57,43,0.18); border: 1px solid var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.62rem; color: var(--red); flex-shrink: 0; margin-top: 2px; }
+    .about-image {
+      background:
+        linear-gradient(to top, rgba(13,13,13,0.75) 0%, transparent 60%),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80') center/cover no-repeat;
+      border-radius: 16px; height: 440px; border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* SERVICE AREA */
+    .service-area { padding: 5rem 5%; background: var(--charcoal); }
+    .counties-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto; }
+    .county-card { background: var(--mid); border: 1px solid rgba(255,255,255,0.05); border-radius: 10px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .county-card span { font-weight: 700; font-size: 0.92rem; }
+    .county-dot { width: 8px; height: 8px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+
+    /* REVIEWS */
+    .reviews { padding: 6rem 5%; background: var(--dark); }
+    .reviews-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 3.5rem; text-align: center; }
+    .rating-big { font-size: 4rem; font-weight: 900; line-height: 1; }
+    .rating-stars { color: #F1C40F; font-size: 1.5rem; margin: 0.35rem 0; }
+    .rating-count { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
+    .review-card { background: var(--charcoal); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.75rem; }
+    .review-stars { color: #F1C40F; font-size: 0.88rem; margin-bottom: 0.75rem; }
+    .review-text { color: rgba(255,255,255,0.68); font-size: 0.9rem; line-height: 1.75; margin-bottom: 1rem; font-style: italic; }
+    .reviewer-name { font-weight: 700; font-size: 0.85rem; }
+    .reviewer-loc { font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+    /* CTA BAND */
+    .cta-band { padding: 5.5rem 5%; background: var(--red); text-align: center; }
+    .cta-band h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; margin-bottom: 0.85rem; }
+    .cta-band p { color: rgba(255,255,255,0.82); font-size: 1.1rem; margin-bottom: 2rem; }
+    .btn-white { background: var(--white); color: var(--red); padding: 0.9rem 2.5rem; border-radius: 8px; font-weight: 700; font-size: 1.05rem; text-decoration: none; display: inline-block; transition: transform 0.2s; margin: 0 0.5rem; }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-white-ghost { background: transparent; color: var(--white); padding: 0.9rem 2.5rem; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6); font-weight: 700; font-size: 1.05rem; text-decoration: none; display: inline-block; transition: transform 0.2s, border-color 0.2s; margin: 0 0.5rem; }
+    .btn-white-ghost:hover { transform: translateY(-2px); border-color: var(--white); }
+
+    /* CONTACT */
+    .contact { padding: 6rem 5%; background: var(--charcoal); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; }
+    .contact-info h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+    .contact-icon { width: 44px; height: 44px; background: rgba(192,57,43,0.14); border: 1px solid rgba(192,57,43,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-detail strong { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(255,255,255,0.38); margin-bottom: 0.18rem; }
+    .contact-detail a, .contact-detail span { color: var(--white); text-decoration: none; font-weight: 600; font-size: 0.97rem; }
+    .contact-form { display: flex; flex-direction: column; gap: 0.9rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+    input, textarea, select { width: 100%; background: var(--mid); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 0.85rem 1rem; color: var(--white); font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+    input:focus, textarea:focus, select:focus { border-color: var(--red); }
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.28); }
+    textarea { resize: vertical; min-height: 110px; }
+    select option { background: var(--mid); }
+    .form-submit { background: var(--red); color: var(--white); border: none; padding: 0.95rem; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+    .form-submit:hover { background: var(--accent); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.05); padding: 2.5rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-size: 1.2rem; font-weight: 900; }
+    .footer-logo span { color: var(--red); }
+    .footer-right { text-align: right; }
+    footer p { color: rgba(255,255,255,0.3); font-size: 0.78rem; }
+    .footer-links { display: flex; gap: 1.5rem; margin-bottom: 0.35rem; }
+    .footer-links a { color: rgba(255,255,255,0.4); font-size: 0.78rem; text-decoration: none; }
+    .footer-links a:hover { color: var(--red); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-image { height: 260px; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+      .trust-divider { display: none; }
+      .footer-right { text-align: left; }
+      .cta-band .btn-white, .cta-band .btn-white-ghost { display: block; margin: 0.5rem auto; max-width: 280px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Franciscus <span>Roofing</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#service-area">Service Area</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Free Estimate</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badges">
+      <span class="badge">&#127981; Veteran Owned</span>
+      <span class="badge badge-gold">&#11088; 4.8 Stars &bull; 556 Reviews</span>
+      <span class="badge badge-green">&#10003; BBB A+ Accredited</span>
+    </div>
+    <h1>Cleveland's Trusted<br/>Roofer Since <span>1991.</span></h1>
+    <p>Over 18,000 satisfied customers across Greater Cleveland and Northeast Ohio. Veteran-owned, BBB A+ rated, available 24/7. Free estimates on every job.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+      <a href="tel:2164740046" class="btn-ghost">&#128222; (216) 474-0046</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">34+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div>
+        <div class="stat-num">18K+</div>
+        <div class="stat-label">Satisfied Customers</div>
+      </div>
+      <div>
+        <div class="stat-num">4.8&#9733;</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div>
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Emergency Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">&#127941; Veteran Owned Business</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item">&#127881; BBB Accredited A+</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item">&#9989; Google Verified &amp; Background Checked</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item">&#128205; Serving 8 Northeast Ohio Counties</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item">&#9200; Open 24 Hours &bull; Free Estimates</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <span class="section-label">What We Do</span>
+    <h2>Complete Roofing Solutions</h2>
+    <p>From minor repairs to full replacements, gutters, siding, and storm damage. We handle everything.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#127968;</div>
+      <h3>Roof Installation</h3>
+      <p>Full new roof installs using premium shingles, metal, and flat roof systems built for Ohio weather.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128295;</div>
+      <h3>Roof Repair</h3>
+      <p>Fast, reliable repairs for leaks, missing shingles, flashing, and damaged sections before small issues get worse.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#127786;</div>
+      <h3>Storm &amp; Hail Damage</h3>
+      <p>Emergency response and full insurance claim support after severe weather. We work directly with your insurer.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128269;</div>
+      <h3>Roof Inspections</h3>
+      <p>Thorough inspections for home buyers, sellers, or general peace of mind. Detailed reports included.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#127783;</div>
+      <h3>Gutter Installation &amp; Repair</h3>
+      <p>New gutters, gutter guards, and repairs to protect your foundation and keep water moving away from your home.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#127968;</div>
+      <h3>Siding</h3>
+      <p>Complete siding installation and replacement to protect and refresh the exterior of your home.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128679;</div>
+      <h3>Attic Venting</h3>
+      <p>Proper attic ventilation extends roof life, improves energy efficiency, and prevents ice dams in winter.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#10052;</div>
+      <h3>Ice Dam Removal</h3>
+      <p>Safe, professional ice dam removal and prevention solutions designed for Northeast Ohio winters.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128167;</div>
+      <h3>Chimney &amp; Skylight Repair</h3>
+      <p>Sealing, flashing, and structural repairs around chimneys and skylights to eliminate leaks at the source.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <span class="section-label">About Us</span>
+      <h2>Serving Cleveland<br/>Since <span>1991</span></h2>
+      <p>Franciscus Roofing has been protecting homes and businesses across Greater Cleveland for over 34 years. What started as a commitment to honest, high-quality workmanship has grown into one of Northeast Ohio's most trusted roofing companies.</p>
+      <p>We are a veteran-owned business, and that means something to us. We bring the same discipline, attention to detail, and sense of duty to every single project we take on, whether it's a quick repair or a full replacement.</p>
+      <p>With more than 18,000 satisfied customers, a 4.8 Google rating, and BBB A+ accreditation, our record speaks for itself. We are available 24 hours a day, respond in minutes, and never charge for estimates.</p>
+      <ul class="about-list">
+        <li><span class="check">&#10003;</span> Veteran-owned and operated</li>
+        <li><span class="check">&#10003;</span> BBB Accredited with A+ rating</li>
+        <li><span class="check">&#10003;</span> Google Verified and background checked</li>
+        <li><span class="check">&#10003;</span> 18,000+ customers served since 1991</li>
+        <li><span class="check">&#10003;</span> Open 24/7 including holidays</li>
+        <li><span class="check">&#10003;</span> Free estimates, no pressure, no obligation</li>
+        <li><span class="check">&#10003;</span> Full insurance claim assistance</li>
+      </ul>
+    </div>
+    <div class="about-image"></div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="service-area" id="service-area">
+  <div class="section-header">
+    <span class="section-label">Where We Work</span>
+    <h2>Serving 8 Northeast Ohio Counties</h2>
+    <p>We cover Greater Cleveland and the surrounding region. If you're in Northeast Ohio, we've got you covered.</p>
+  </div>
+  <div class="counties-grid">
+    <div class="county-card"><span class="county-dot"></span><span>Cuyahoga County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Lorain County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Medina County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Summit County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Lake County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Erie County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Ottawa County</span></div>
+    <div class="county-card"><span class="county-dot"></span><span>Sandusky County</span></div>
+  </div>
+  <p style="text-align:center; color: rgba(255,255,255,0.38); font-size: 0.82rem; margin-top: 2rem;">Including Cleveland, Westlake, Garfield Heights, Parma, Strongsville, Maple Heights, Lakewood, Beachwood, and surrounding communities.</p>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-header">
+    <span class="section-label">What Customers Say</span>
+    <div class="rating-big">4.8</div>
+    <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <div class="rating-count">Based on 556 Google reviews</div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"You couldn't ask for a better project manager than Sean Van Dyke. The entire crew was professional, fast, and left the property cleaner than they found it."</p>
+      <div class="reviewer-name">T. Mitchell</div>
+      <div class="reviewer-loc">Cleveland, OH &bull; Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Our roof and siding look absolutely great. Franciscus handled everything from the inspection to the final cleanup. Couldn't be happier with the results."</p>
+      <div class="reviewer-name">M. Baxter</div>
+      <div class="reviewer-loc">Westlake, OH &bull; Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"All my questions were answered thoroughly. They walked me through the whole insurance process and I felt completely informed at every step. Highly recommend."</p>
+      <div class="reviewer-name">K. Ostrowski</div>
+      <div class="reviewer-loc">Parma, OH &bull; Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"They responded within the hour after a major storm hit our neighborhood. Had a tarp up that night and a full replacement done by the end of the week. Outstanding service."</p>
+      <div class="reviewer-name">J. Kowalski</div>
+      <div class="reviewer-loc">Strongsville, OH &bull; Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"34 years in business and you can feel that experience in every part of the job. Fair pricing, no surprises, and the roof looks perfect. This is who you call in Cleveland."</p>
+      <div class="reviewer-name">R. Daniels</div>
+      <div class="reviewer-loc">Lakewood, OH &bull; Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Being a veteran-owned company matters. They treated us with respect from the first call to the final handshake. Best roofing experience we've had in 20 years of homeownership."</p>
+      <div class="reviewer-name">A. &amp; D. Freeman</div>
+      <div class="reviewer-loc">Maple Heights, OH &bull; Google Review</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <h2>Ready to Protect Your Roof?</h2>
+  <p>Get a free, no-obligation estimate from Cleveland's most trusted roofer. We respond in minutes.</p>
+  <a href="#contact" class="btn-white">Request Free Estimate</a>
+  <a href="tel:2164740046" class="btn-white-ghost">&#128222; Call (216) 474-0046</a>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-label">Contact Us</span>
+      <h3>Get Your Free Estimate Today</h3>
+      <p style="color: rgba(255,255,255,0.55); font-size: 0.92rem; margin-bottom: 1.75rem;">We respond in minutes. No pressure, no obligation. Just honest answers about your roof.</p>
+      <div class="contact-item">
+        <div class="contact-icon">&#128222;</div>
+        <div class="contact-detail">
+          <strong>Phone</strong>
+          <a href="tel:2164740046">(216) 474-0046</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#128205;</div>
+        <div class="contact-detail">
+          <strong>Service Area</strong>
+          <span>Greater Cleveland &amp; Northeast Ohio</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#9200;</div>
+        <div class="contact-detail">
+          <strong>Hours</strong>
+          <span>Open 24 Hours, 7 Days a Week</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#9989;</div>
+        <div class="contact-detail">
+          <strong>Response Time</strong>
+          <span>Typically replies in a few minutes</span>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <input type="text" name="first_name" placeholder="First Name" required />
+        <input type="text" name="last_name" placeholder="Last Name" required />
+      </div>
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" />
+      <select name="service">
+        <option value="" disabled selected>Select Service Needed</option>
+        <option>Roof Replacement</option>
+        <option>Roof Repair</option>
+        <option>Storm / Hail Damage</option>
+        <option>Roof Inspection</option>
+        <option>Gutter Installation or Repair</option>
+        <option>Siding</option>
+        <option>Attic Venting</option>
+        <option>Ice Dam Removal</option>
+        <option>Chimney or Skylight Repair</option>
+        <option>Other</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your project or issue..."></textarea>
+      <button type="submit" class="form-submit">Send My Request &rarr;</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Franciscus <span>Roofing</span></div>
+    <p style="margin-top: 0.4rem;">Veteran Owned &bull; BBB A+ Accredited &bull; Serving Cleveland Since 1991</p>
+  </div>
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#service-area">Service Area</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; 2026 Franciscus Roofing &bull; <a href="tel:2164740046" style="color: rgba(255,255,255,0.3); text-decoration:none;">(216) 474-0046</a></p>
+    <p style="margin-top: 0.25rem; color: rgba(255,255,255,0.15);">Site by EMPOSSIBLE</p>
+  </div>
+</footer>
+
+</body>
+</html>
