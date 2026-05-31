@@ -13,6 +13,12 @@
 </head>
 <body>
 
+  <!-- GLOBAL ORB CANVAS -->
+  <canvas id="orbCanvas" aria-hidden="true"></canvas>
+
+  <!-- CURSOR GLOW -->
+  <div id="cursorGlow" aria-hidden="true"></div>
+
   <!-- NAV -->
   <header class="nav-wrap" id="navbar">
     <nav class="nav-inner">
@@ -53,8 +59,9 @@
       <!-- PLACEHOLDER: replace with a professional photo of Radiant Roofing crew or completed roof -->
       <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80" alt="Professional roofing work on a Northeast Ohio home" class="hero-img" />
     </div>
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
     <div class="hero-content">
-      <div class="hero-badge reveal">&#127775; Owens Corning Preferred Contractor</div>
+      <div class="hero-badge reveal">✨ Owens Corning Preferred Contractor</div>
       <h1 class="hero-title reveal">Professional Roofing<br />in <em>Northeast Ohio</em></h1>
       <p class="hero-sub reveal">We are obsessed with providing our clients with an amazing roofing experience. Storm damage, insurance claims, full replacements &mdash; we protect your home and your peace of mind.</p>
       <div class="hero-actions reveal">
@@ -86,26 +93,11 @@
   <section class="trust-bar">
     <div class="container">
       <div class="trust-grid">
-        <div class="trust-item reveal">
-          <i data-lucide="shield-check"></i>
-          <span>Licensed, Bonded &amp; Insured</span>
-        </div>
-        <div class="trust-item reveal">
-          <i data-lucide="award"></i>
-          <span>Owens Corning Preferred</span>
-        </div>
-        <div class="trust-item reveal">
-          <i data-lucide="check-circle"></i>
-          <span>Directorii Approved</span>
-        </div>
-        <div class="trust-item reveal">
-          <i data-lucide="dollar-sign"></i>
-          <span>$0 Down Financing</span>
-        </div>
-        <div class="trust-item reveal">
-          <i data-lucide="building-2"></i>
-          <span>Residential &amp; Commercial</span>
-        </div>
+        <div class="trust-item reveal"><i data-lucide="shield-check"></i><span>Licensed, Bonded &amp; Insured</span></div>
+        <div class="trust-item reveal"><i data-lucide="award"></i><span>Owens Corning Preferred</span></div>
+        <div class="trust-item reveal"><i data-lucide="check-circle"></i><span>Directorii Approved</span></div>
+        <div class="trust-item reveal"><i data-lucide="dollar-sign"></i><span>$0 Down Financing</span></div>
+        <div class="trust-item reveal"><i data-lucide="building-2"></i><span>Residential &amp; Commercial</span></div>
       </div>
     </div>
   </section>
@@ -181,10 +173,7 @@
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Radiant Roofing crew in Northeast Ohio" />
             <div class="about-badge-float">
               <i data-lucide="award"></i>
-              <div>
-                <strong>Owens Corning</strong>
-                <span>Preferred Contractor</span>
-              </div>
+              <div><strong>Owens Corning</strong><span>Preferred Contractor</span></div>
             </div>
           </div>
         </div>
@@ -405,20 +394,16 @@
           <p class="reveal">No pressure. No obligation. Just an honest look at your roof by a professional who actually cares. We'll show you photos of every issue we find and walk you through your options &mdash; repair, insurance claim, or full replacement.</p>
           <div class="contact-info reveal">
             <a href="tel:+12163001953" class="contact-item">
-              <i data-lucide="phone"></i>
-              <span>(216) 300-1953</span>
+              <i data-lucide="phone"></i><span>(216) 300-1953</span>
             </a>
             <a href="mailto:info@1radroof.com" class="contact-item">
-              <i data-lucide="mail"></i>
-              <span>info@1radroof.com</span>
+              <i data-lucide="mail"></i><span>info@1radroof.com</span>
             </a>
             <div class="contact-item">
-              <i data-lucide="map-pin"></i>
-              <span>Bedford Heights, OH &mdash; serving all of Northeast Ohio</span>
+              <i data-lucide="map-pin"></i><span>Bedford Heights, OH &mdash; serving all of Northeast Ohio</span>
             </div>
             <a href="https://directorii.com/us/oh/bedford/radiant-roofing-and-solar-reviews-12478/?v=1" target="_blank" rel="noopener" class="contact-item">
-              <i data-lucide="external-link"></i>
-              <span>View Us on Directorii</span>
+              <i data-lucide="external-link"></i><span>View Us on Directorii</span>
             </a>
           </div>
         </div>
