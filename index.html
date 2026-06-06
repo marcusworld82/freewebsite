@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rodina Consulting – PSA Professional Service Automation Consultants</title>
+  <title>Rodina Consulting &ndash; PSA Professional Service Automation Consultants</title>
   <meta name="description" content="Rodina's Client Portal simplifies how firms manage invoices, documents, and payments, all in one secure, easy-to-use platform. Stop chasing payments. Start delivering a modern client experience." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +13,8 @@
 </head>
 <body>
 
-  <!-- ANIMATED BG CANVAS -->
-  <canvas id="bgCanvas" aria-hidden="true"></canvas>
-
   <!-- CURSOR GLOW -->
   <div id="cursorGlow" aria-hidden="true"></div>
-
-  <!-- NOISE OVERLAY -->
-  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav-wrap" id="navbar">
@@ -57,65 +51,73 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-particles" id="heroParticles"></div>
-    <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        PSA Professional Service Automation
-      </div>
-      <h1 class="hero-title reveal">One shared portal<br />for <em>you and your clients.</em></h1>
-      <p class="hero-sub reveal">Simplify your client experience while protecting sensitive information and driving results. Stop chasing payments. Start delivering a modern client experience.</p>
-      <div class="hero-actions reveal">
-        <a href="#contact" class="btn btn-primary btn-lg">Request a Demo</a>
-        <a href="#portal" class="btn btn-ghost btn-lg">See How It Works</a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat">
-          <span class="stat-num">1</span>
-          <span class="stat-label">Unified Portal</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">3x</span>
-          <span class="stat-label">Faster Cash Flow</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Secure &amp; Encrypted</span>
-        </div>
-      </div>
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=85" alt="Modern professional office" class="hero-img" />
+      <div class="hero-overlay"></div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="portal-mockup">
-        <div class="mockup-bar">
-          <span></span><span></span><span></span>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          PSA Professional Service Automation
         </div>
-        <div class="mockup-body">
-          <div class="mockup-row">
-            <div class="mockup-label">Invoice #1042</div>
-            <div class="mockup-status paid">Paid</div>
+        <h1 class="hero-title reveal">One shared portal<br />for <em>you and your clients.</em></h1>
+        <p class="hero-sub reveal">Simplify your client experience while protecting sensitive information and driving results. Stop chasing payments. Start delivering a modern client experience.</p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-primary btn-lg">Request a Demo</a>
+          <a href="#portal" class="btn btn-outline btn-lg">See How It Works</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Unified Portal</span>
           </div>
-          <div class="mockup-row">
-            <div class="mockup-label">Invoice #1043</div>
-            <div class="mockup-status pending">Pending</div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">3x</span>
+            <span class="stat-label">Faster Cash Flow</span>
           </div>
-          <div class="mockup-row">
-            <div class="mockup-label">Q2 Report.pdf</div>
-            <div class="mockup-status doc">Document</div>
-          </div>
-          <div class="mockup-row">
-            <div class="mockup-label">Invoice #1044</div>
-            <div class="mockup-status paid">Paid</div>
-          </div>
-          <div class="mockup-progress">
-            <span class="prog-label">Cash Flow</span>
-            <div class="prog-bar"><div class="prog-fill"></div></div>
-            <span class="prog-val">87%</span>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Secure &amp; Encrypted</span>
           </div>
         </div>
       </div>
-      <div class="float-badge fb1"><i data-lucide="shield-check"></i> Secure</div>
-      <div class="float-badge fb2"><i data-lucide="zap"></i> Automated</div>
-      <div class="float-badge fb3"><i data-lucide="trending-up"></i> Real-time</div>
+      <div class="hero-visual reveal">
+        <div class="portal-mockup">
+          <div class="mockup-bar">
+            <span></span><span></span><span></span>
+            <span class="mockup-title">Client Portal</span>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-row">
+              <div class="mockup-label">Invoice #1042</div>
+              <div class="mockup-status paid">Paid</div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-label">Invoice #1043</div>
+              <div class="mockup-status pending">Pending</div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-label">Q2 Report.pdf</div>
+              <div class="mockup-status doc">Document</div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-label">Invoice #1044</div>
+              <div class="mockup-status paid">Paid</div>
+            </div>
+            <div class="mockup-progress">
+              <span class="prog-label">Cash Flow</span>
+              <div class="prog-bar"><div class="prog-fill"></div></div>
+              <span class="prog-val">87%</span>
+            </div>
+          </div>
+        </div>
+        <div class="float-badge fb1"><i data-lucide="shield-check"></i> Enterprise Secure</div>
+        <div class="float-badge fb2"><i data-lucide="zap"></i> Automated</div>
+        <div class="float-badge fb3"><i data-lucide="trending-up"></i> Real-time Data</div>
+      </div>
     </div>
     <div class="hero-scroll-hint">
       <span>Scroll</span>
@@ -123,13 +125,15 @@
     </div>
   </section>
 
-  <!-- QUOTE BANNER -->
-  <section class="quote-banner">
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
     <div class="container">
-      <div class="quote-inner reveal">
-        <div class="quote-icon"><i data-lucide="quote"></i></div>
-        <blockquote>"The Rodina Client Portal was exactly what we were looking for."</blockquote>
-        <cite>CFO of a Top 50 Accounting Firm</cite>
+      <div class="trust-grid">
+        <div class="trust-item reveal"><i data-lucide="shield-check"></i><span>Enterprise-Grade Security</span></div>
+        <div class="trust-item reveal"><i data-lucide="lock"></i><span>Role-Based Access Control</span></div>
+        <div class="trust-item reveal"><i data-lucide="bell"></i><span>Automated Reminders</span></div>
+        <div class="trust-item reveal"><i data-lucide="credit-card"></i><span>Multiple Payment Options</span></div>
+        <div class="trust-item reveal"><i data-lucide="bar-chart-2"></i><span>Real-Time Analytics</span></div>
       </div>
     </div>
   </section>
@@ -142,28 +146,42 @@
         <h2>A Smarter Way <em>To Get Paid.</em></h2>
         <p class="section-sub">A Finance First Approach to Client Management for Accounting Practices.</p>
       </div>
-      <div class="portal-grid">
-        <div class="portal-card reveal">
-          <div class="portal-card-icon"><i data-lucide="users"></i></div>
-          <h3>Client Experience</h3>
-          <p>Exceed your client's expectations with an accessible, secure payment portal. Raise the bar for professionalism to meet your firm's reputation, giving your clients confidence with every transaction.</p>
+      <div class="portal-feature-grid">
+        <div class="portal-feature-img reveal">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80" alt="Professional reviewing financial documents" />
+          <div class="img-badge"><i data-lucide="check-circle"></i> Finance First Approach</div>
         </div>
-        <div class="portal-card reveal">
-          <div class="portal-card-icon"><i data-lucide="trending-up"></i></div>
-          <h3>Cash Flow Acceleration</h3>
-          <p>Offer your clients a simple way to settle invoices online with multiple payment options. Automate invoicing, send notifications, and accelerate payment cycles with our seamless payment portal.</p>
-        </div>
-        <div class="portal-card reveal">
-          <div class="portal-card-icon"><i data-lucide="eye"></i></div>
-          <h3>Enhanced Transparency and Credibility</h3>
-          <p>Have access to real time data to make faster and more accurate decisions, maintaining trust within your firm and with your clients.</p>
+        <div class="portal-feature-copy">
+          <div class="portal-card reveal">
+            <div class="portal-card-icon"><i data-lucide="users"></i></div>
+            <div>
+              <h3>Client Experience</h3>
+              <p>Exceed your client's expectations with an accessible, secure payment portal. Raise the bar for professionalism to meet your firm's reputation, giving your clients confidence with every transaction.</p>
+            </div>
+          </div>
+          <div class="portal-card reveal">
+            <div class="portal-card-icon"><i data-lucide="trending-up"></i></div>
+            <div>
+              <h3>Cash Flow Acceleration</h3>
+              <p>Offer your clients a simple way to settle invoices online with multiple payment options. Automate invoicing, send notifications, and accelerate payment cycles with our seamless payment portal.</p>
+            </div>
+          </div>
+          <div class="portal-card reveal">
+            <div class="portal-card-icon"><i data-lucide="eye"></i></div>
+            <div>
+              <h3>Enhanced Transparency and Credibility</h3>
+              <p>Have access to real time data to make faster and more accurate decisions, maintaining trust within your firm and with your clients.</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="portal-cta-block reveal">
-        <p>Rodina's Client Portal simplifies how firms manage invoices, documents, and payments, all in one secure, easy-to-use platform.</p>
-        <p>With automated reminders, role-based access, and enterprise-grade data protection, you reduce friction for your clients and accelerate cash flow for your firm.</p>
-        <p class="portal-tagline">Stop chasing payments. <strong>Start delivering a modern client experience.</strong></p>
-        <a href="#contact" class="btn btn-primary">Get a Demo</a>
+        <div class="portal-cta-text">
+          <p>Rodina's Client Portal simplifies how firms manage invoices, documents, and payments &mdash; all in one secure, easy-to-use platform.</p>
+          <p>With automated reminders, role-based access, and enterprise-grade data protection, you reduce friction for your clients and accelerate cash flow for your firm.</p>
+          <p class="portal-tagline">Stop chasing payments. <strong>Start delivering a modern client experience.</strong></p>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-lg">Get a Demo</a>
       </div>
     </div>
   </section>
@@ -171,35 +189,54 @@
   <!-- WHY RODINA -->
   <section class="section why-section">
     <div class="container">
-      <div class="section-head reveal">
-        <p class="overline">Why RODINA?</p>
-        <h2>Built for <em>Professional Service Firms.</em></h2>
+      <div class="why-inner">
+        <div class="why-copy">
+          <p class="overline reveal">Why RODINA?</p>
+          <h2 class="reveal">Built for <em>Professional<br />Service Firms.</em></h2>
+          <p class="reveal" style="color:#4a5568;line-height:1.8;margin-bottom:32px;">We understand the unique challenges of professional service firms. Rodina was purpose-built to solve the cash flow, transparency, and client experience problems that generic tools simply cannot.</p>
+          <a href="#contact" class="btn btn-primary reveal">See It In Action</a>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <div class="why-num">01</div>
+            <div class="why-icon"><i data-lucide="lock"></i></div>
+            <h3>Enterprise-Grade Security</h3>
+            <p>Role-based access and enterprise-grade data protection so sensitive information stays protected at every level.</p>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-num">02</div>
+            <div class="why-icon"><i data-lucide="bell"></i></div>
+            <h3>Automated Reminders</h3>
+            <p>Stop chasing down clients. Automated notifications keep your pipeline moving and your receivables current.</p>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-num">03</div>
+            <div class="why-icon"><i data-lucide="credit-card"></i></div>
+            <h3>Multiple Payment Options</h3>
+            <p>Give clients the flexibility to pay how they prefer. More options means faster collections and better client satisfaction.</p>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-num">04</div>
+            <div class="why-icon"><i data-lucide="bar-chart-2"></i></div>
+            <h3>Real-Time Data</h3>
+            <p>Make faster, more accurate decisions with live dashboard data. Maintain trust within your firm and with your clients.</p>
+          </div>
+        </div>
       </div>
-      <div class="why-grid">
-        <div class="why-item reveal">
-          <div class="why-num">01</div>
-          <div class="why-icon"><i data-lucide="lock"></i></div>
-          <h3>Enterprise-Grade Security</h3>
-          <p>Role-based access and enterprise-grade data protection so sensitive information stays protected at every level.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="why-num">02</div>
-          <div class="why-icon"><i data-lucide="bell"></i></div>
-          <h3>Automated Reminders</h3>
-          <p>Stop chasing down clients. Automated notifications keep your pipeline moving and your receivables current.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="why-num">03</div>
-          <div class="why-icon"><i data-lucide="credit-card"></i></div>
-          <h3>Multiple Payment Options</h3>
-          <p>Give clients the flexibility to pay how they prefer. More options means faster collections and better client satisfaction.</p>
-        </div>
-        <div class="why-item reveal">
-          <div class="why-num">04</div>
-          <div class="why-icon"><i data-lucide="bar-chart-2"></i></div>
-          <h3>Real-Time Data</h3>
-          <p>Make faster, more accurate decisions with live dashboard data. Maintain trust within your firm and with your clients.</p>
-        </div>
+    </div>
+  </section>
+
+  <!-- QUOTE BANNER -->
+  <section class="quote-banner">
+    <div class="quote-bg">
+      <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=1600&q=80" alt="Professional team in boardroom" />
+      <div class="quote-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="quote-inner reveal">
+        <div class="quote-icon"><i data-lucide="quote"></i></div>
+        <blockquote>"The Rodina Client Portal was exactly what we were looking for."</blockquote>
+        <cite>CFO of a Top 50 Accounting Firm</cite>
       </div>
     </div>
   </section>
@@ -210,25 +247,44 @@
       <div class="section-head reveal">
         <p class="overline">Industry Expertise in Professional Services</p>
         <h2>Learn how we can <em>help your business</em></h2>
+        <p class="section-sub">Purpose-built solutions for the industries that power the professional services economy.</p>
       </div>
       <div class="industries-grid">
         <div class="industry-card reveal">
-          <div class="ind-icon"><i data-lucide="cpu"></i></div>
-          <h3>Technology</h3>
-          <p>Streamline billing and client document workflows for tech firms and SaaS consultancies with automated portals built for scale.</p>
-          <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
+          <div class="industry-img">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Technology industry" />
+            <div class="industry-img-overlay"></div>
+          </div>
+          <div class="industry-body">
+            <div class="ind-icon"><i data-lucide="cpu"></i></div>
+            <h3>Technology</h3>
+            <p>Streamline billing and client document workflows for tech firms and SaaS consultancies with automated portals built for scale.</p>
+            <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
         <div class="industry-card reveal">
-          <div class="ind-icon"><i data-lucide="calculator"></i></div>
-          <h3>Accounting Firms</h3>
-          <p>From Top 50 firms to boutique practices, Rodina's portal fits the way accountants work. Secure document sharing, invoice management, and fast collections.</p>
-          <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
+          <div class="industry-img">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Accounting firms" />
+            <div class="industry-img-overlay"></div>
+          </div>
+          <div class="industry-body">
+            <div class="ind-icon"><i data-lucide="calculator"></i></div>
+            <h3>Accounting Firms</h3>
+            <p>From Top 50 firms to boutique practices, Rodina's portal fits the way accountants work. Secure document sharing, invoice management, and fast collections.</p>
+            <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
         <div class="industry-card reveal">
-          <div class="ind-icon"><i data-lucide="briefcase"></i></div>
-          <h3>Consulting</h3>
-          <p>Consulting firms need speed, professionalism, and discretion. Rodina delivers all three in a single client-facing portal your team will actually use.</p>
-          <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
+          <div class="industry-img">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Consulting industry" />
+            <div class="industry-img-overlay"></div>
+          </div>
+          <div class="industry-body">
+            <div class="ind-icon"><i data-lucide="briefcase"></i></div>
+            <h3>Consulting</h3>
+            <p>Consulting firms need speed, professionalism, and discretion. Rodina delivers all three in a single client-facing portal your team will actually use.</p>
+            <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -239,21 +295,22 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="overline">Platform Features</p>
-        <h2>Everything Your Firm <em>Needs. Nothing It Doesn't.</em></h2>
+        <h2>Everything Your Firm <em>Needs.</em></h2>
+        <p class="section-sub">Nothing It Doesn't. Every feature is built around one goal: get your firm paid faster while delivering a world-class client experience.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-item reveal"><i data-lucide="file-text"></i><span>Invoice Management</span></div>
-        <div class="feature-item reveal"><i data-lucide="folder"></i><span>Document Storage</span></div>
-        <div class="feature-item reveal"><i data-lucide="credit-card"></i><span>Online Payments</span></div>
-        <div class="feature-item reveal"><i data-lucide="bell"></i><span>Automated Reminders</span></div>
-        <div class="feature-item reveal"><i data-lucide="shield"></i><span>Role-Based Access</span></div>
-        <div class="feature-item reveal"><i data-lucide="bar-chart-2"></i><span>Real-Time Dashboard</span></div>
-        <div class="feature-item reveal"><i data-lucide="mail"></i><span>Client Notifications</span></div>
-        <div class="feature-item reveal"><i data-lucide="lock"></i><span>Enterprise-Grade Encryption</span></div>
-        <div class="feature-item reveal"><i data-lucide="users"></i><span>Multi-User Portal</span></div>
-        <div class="feature-item reveal"><i data-lucide="zap"></i><span>Payment Cycle Automation</span></div>
-        <div class="feature-item reveal"><i data-lucide="activity"></i><span>Cash Flow Analytics</span></div>
-        <div class="feature-item reveal"><i data-lucide="settings"></i><span>Firm-Level Controls</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="file-text"></i></div><span>Invoice Management</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="folder"></i></div><span>Document Storage</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="credit-card"></i></div><span>Online Payments</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="bell"></i></div><span>Automated Reminders</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="shield"></i></div><span>Role-Based Access</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="bar-chart-2"></i></div><span>Real-Time Dashboard</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="mail"></i></div><span>Client Notifications</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="lock"></i></div><span>Enterprise Encryption</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="users"></i></div><span>Multi-User Portal</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="zap"></i></div><span>Payment Automation</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="activity"></i></div><span>Cash Flow Analytics</span></div>
+        <div class="feature-item reveal"><div class="fi-icon"><i data-lucide="settings"></i></div><span>Firm-Level Controls</span></div>
       </div>
     </div>
   </section>
@@ -264,25 +321,41 @@
       <div class="section-head reveal">
         <p class="overline">Featured Discussions</p>
         <h2>Insights for <em>Modern Firms.</em></h2>
+        <p class="section-sub">Thought leadership on PSA, cash flow, and professional services innovation.</p>
       </div>
       <div class="discussions-grid">
         <div class="discussion-card reveal">
-          <div class="disc-tag">Accounting Firms</div>
-          <h3>Why Top Accounting Firms Are Moving to Client Portals</h3>
-          <p>The shift from email-based workflows to unified portals is accelerating. Here is why CFOs at leading firms are making the switch now.</p>
-          <a href="#contact" class="disc-link">Read More <i data-lucide="arrow-right"></i></a>
+          <div class="disc-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Accounting discussion" />
+          </div>
+          <div class="disc-body">
+            <div class="disc-tag">Accounting Firms</div>
+            <h3>Why Top Accounting Firms Are Moving to Client Portals</h3>
+            <p>The shift from email-based workflows to unified portals is accelerating. Here is why CFOs at leading firms are making the switch now.</p>
+            <a href="#contact" class="ind-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
         <div class="discussion-card reveal">
-          <div class="disc-tag">Technology</div>
-          <h3>Automating Cash Flow: The PSA Advantage for Tech Consultancies</h3>
-          <p>Professional Service Automation is changing how technology firms manage billing, documents, and client relationships at scale.</p>
-          <a href="#contact" class="disc-link">Read More <i data-lucide="arrow-right"></i></a>
+          <div class="disc-img">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Technology discussion" />
+          </div>
+          <div class="disc-body">
+            <div class="disc-tag">Technology</div>
+            <h3>Automating Cash Flow: The PSA Advantage for Tech Consultancies</h3>
+            <p>Professional Service Automation is changing how technology firms manage billing, documents, and client relationships at scale.</p>
+            <a href="#contact" class="ind-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
         <div class="discussion-card reveal">
-          <div class="disc-tag">Consulting</div>
-          <h3>Client Experience as a Competitive Moat in Consulting</h3>
-          <p>Firms that prioritize the client payment experience are winning more referrals, retaining clients longer, and growing faster.</p>
-          <a href="#contact" class="disc-link">Read More <i data-lucide="arrow-right"></i></a>
+          <div class="disc-img">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Consulting discussion" />
+          </div>
+          <div class="disc-body">
+            <div class="disc-tag">Consulting</div>
+            <h3>Client Experience as a Competitive Moat in Consulting</h3>
+            <p>Firms that prioritize the client payment experience are winning more referrals, retaining clients longer, and growing faster.</p>
+            <a href="#contact" class="ind-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -298,7 +371,7 @@
       <div class="events-empty reveal">
         <div class="events-empty-icon"><i data-lucide="calendar"></i></div>
         <p>No events at the moment. Check back soon or reach out to get on our invite list.</p>
-        <a href="#contact" class="btn btn-ghost">Get on the List</a>
+        <a href="#contact" class="btn btn-primary">Get on the List</a>
       </div>
     </div>
   </section>
@@ -309,8 +382,11 @@
       <div class="contact-grid">
         <div class="contact-copy">
           <p class="overline reveal">Get Started</p>
-          <h2 class="reveal">Ready to <em>Modernize Your Firm?</em></h2>
+          <h2 class="reveal">Ready to <em>Modernize<br />Your Firm?</em></h2>
           <p class="reveal">See the Rodina Client Portal in action. We will walk you through how it fits your firm's workflow, answer every question, and help you get set up fast.</p>
+          <div class="contact-img reveal">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=700&q=80" alt="Professional team meeting" />
+          </div>
           <div class="contact-features reveal">
             <div class="cf-item"><i data-lucide="check-circle"></i><span>Personalized demo for your firm</span></div>
             <div class="cf-item"><i data-lucide="check-circle"></i><span>No long-term commitments required</span></div>
@@ -319,6 +395,7 @@
           </div>
         </div>
         <form class="contact-form reveal" id="contactForm">
+          <h3>Request a Demo</h3>
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
