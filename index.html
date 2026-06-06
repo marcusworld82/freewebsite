@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Radiant Roofing – Roofing Contractor Bedford Heights OH</title>
-  <meta name="description" content="Radiant Roofing is Bedford Heights OH's premier roofing contractor. Insurance claims, storm damage, roof replacement, gutters, siding & solar. Owens Corning Preferred. Free inspection." />
+  <title>Rodina Consulting – PSA Professional Service Automation Consultants</title>
+  <meta name="description" content="Rodina's Client Portal simplifies how firms manage invoices, documents, and payments, all in one secure, easy-to-use platform. Stop chasing payments. Start delivering a modern client experience." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -13,27 +13,30 @@
 </head>
 <body>
 
-  <!-- GLOBAL ORB CANVAS -->
-  <canvas id="orbCanvas" aria-hidden="true"></canvas>
+  <!-- ANIMATED BG CANVAS -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
 
   <!-- CURSOR GLOW -->
   <div id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav-wrap" id="navbar">
     <nav class="nav-inner">
       <a href="#" class="nav-logo">
-        <span class="logo-icon"><i data-lucide="home"></i></span>
-        <span class="logo-text">Radiant <em>Roofing</em></span>
+        <span class="logo-icon"><i data-lucide="layers"></i></span>
+        <span class="logo-text">RODINA<em>.</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#financing">Financing</a></li>
-        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#portal">Portal</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#discussions">Insights</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Free Inspection</a>
+      <a href="#contact" class="btn btn-primary nav-cta">Get a Demo</a>
       <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -43,45 +46,76 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#services" class="mobile-link">Services</a></li>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#financing" class="mobile-link">Financing</a></li>
-      <li><a href="#reviews" class="mobile-link">Reviews</a></li>
+      <li><a href="#portal" class="mobile-link">Portal</a></li>
+      <li><a href="#industries" class="mobile-link">Industries</a></li>
+      <li><a href="#features" class="mobile-link">Features</a></li>
+      <li><a href="#discussions" class="mobile-link">Insights</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
-    <a href="#contact" class="btn btn-primary mobile-cta mobile-link">Get Free Inspection</a>
+    <a href="#contact" class="btn btn-primary mobile-cta mobile-link">Get a Demo</a>
   </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-overlay"></div>
-      <!-- PLACEHOLDER: replace with a professional photo of Radiant Roofing crew or completed roof -->
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80" alt="Professional roofing work on a Northeast Ohio home" class="hero-img" />
-    </div>
-    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
     <div class="hero-content">
-      <div class="hero-badge reveal">✨ Owens Corning Preferred Contractor</div>
-      <h1 class="hero-title reveal">Professional Roofing<br />in <em>Northeast Ohio</em></h1>
-      <p class="hero-sub reveal">We are obsessed with providing our clients with an amazing roofing experience. Storm damage, insurance claims, full replacements &mdash; we protect your home and your peace of mind.</p>
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        PSA Professional Service Automation
+      </div>
+      <h1 class="hero-title reveal">One shared portal<br />for <em>you and your clients.</em></h1>
+      <p class="hero-sub reveal">Simplify your client experience while protecting sensitive information and driving results. Stop chasing payments. Start delivering a modern client experience.</p>
       <div class="hero-actions reveal">
-        <a href="#contact" class="btn btn-primary btn-lg">Schedule Free Inspection</a>
-        <a href="#services" class="btn btn-ghost btn-lg">Our Services</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Request a Demo</a>
+        <a href="#portal" class="btn btn-ghost btn-lg">See How It Works</a>
       </div>
       <div class="hero-stats reveal">
         <div class="stat">
-          <span class="stat-num">1,000+</span>
-          <span class="stat-label">Insurance Claims Filed</span>
+          <span class="stat-num">1</span>
+          <span class="stat-label">Unified Portal</span>
         </div>
         <div class="stat">
-          <span class="stat-num">30&#9733;</span>
-          <span class="stat-label">Google Reviews</span>
+          <span class="stat-num">3x</span>
+          <span class="stat-label">Faster Cash Flow</span>
         </div>
         <div class="stat">
-          <span class="stat-num">$250K</span>
-          <span class="stat-label">Directorii Protection</span>
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Secure &amp; Encrypted</span>
         </div>
       </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="portal-mockup">
+        <div class="mockup-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-row">
+            <div class="mockup-label">Invoice #1042</div>
+            <div class="mockup-status paid">Paid</div>
+          </div>
+          <div class="mockup-row">
+            <div class="mockup-label">Invoice #1043</div>
+            <div class="mockup-status pending">Pending</div>
+          </div>
+          <div class="mockup-row">
+            <div class="mockup-label">Q2 Report.pdf</div>
+            <div class="mockup-status doc">Document</div>
+          </div>
+          <div class="mockup-row">
+            <div class="mockup-label">Invoice #1044</div>
+            <div class="mockup-status paid">Paid</div>
+          </div>
+          <div class="mockup-progress">
+            <span class="prog-label">Cash Flow</span>
+            <div class="prog-bar"><div class="prog-fill"></div></div>
+            <span class="prog-val">87%</span>
+          </div>
+        </div>
+      </div>
+      <div class="float-badge fb1"><i data-lucide="shield-check"></i> Secure</div>
+      <div class="float-badge fb2"><i data-lucide="zap"></i> Automated</div>
+      <div class="float-badge fb3"><i data-lucide="trending-up"></i> Real-time</div>
     </div>
     <div class="hero-scroll-hint">
       <span>Scroll</span>
@@ -89,297 +123,182 @@
     </div>
   </section>
 
-  <!-- TRUST BAR -->
-  <section class="trust-bar">
+  <!-- QUOTE BANNER -->
+  <section class="quote-banner">
     <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item reveal"><i data-lucide="shield-check"></i><span>Licensed, Bonded &amp; Insured</span></div>
-        <div class="trust-item reveal"><i data-lucide="award"></i><span>Owens Corning Preferred</span></div>
-        <div class="trust-item reveal"><i data-lucide="check-circle"></i><span>Directorii Approved</span></div>
-        <div class="trust-item reveal"><i data-lucide="dollar-sign"></i><span>$0 Down Financing</span></div>
-        <div class="trust-item reveal"><i data-lucide="building-2"></i><span>Residential &amp; Commercial</span></div>
+      <div class="quote-inner reveal">
+        <div class="quote-icon"><i data-lucide="quote"></i></div>
+        <blockquote>"The Rodina Client Portal was exactly what we were looking for."</blockquote>
+        <cite>CFO of a Top 50 Accounting Firm</cite>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
+  <!-- PORTAL SECTION -->
+  <section class="section" id="portal">
     <div class="container">
       <div class="section-head reveal">
-        <p class="overline">What We Do</p>
-        <h2>Complete Exterior <em>Solutions</em></h2>
-        <p class="section-sub">From a missing shingle to a full commercial flat roof &mdash; EPDM, TPO, or asphalt &mdash; our crews handle every exterior challenge with precision and care.</p>
+        <p class="overline">The Rodina Client Portal</p>
+        <h2>A Smarter Way <em>To Get Paid.</em></h2>
+        <p class="section-sub">A Finance First Approach to Client Management for Accounting Practices.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="file-text"></i></div>
-          <h3>Insurance Claims</h3>
-          <p>After handling over 1,000 insurance claims, we know exactly how to document your damage, communicate with your adjuster, and maximize your claim so you pay nothing out of pocket.</p>
-          <a href="#contact" class="service-link">Get Started <i data-lucide="arrow-right"></i></a>
+      <div class="portal-grid">
+        <div class="portal-card reveal">
+          <div class="portal-card-icon"><i data-lucide="users"></i></div>
+          <h3>Client Experience</h3>
+          <p>Exceed your client's expectations with an accessible, secure payment portal. Raise the bar for professionalism to meet your firm's reputation, giving your clients confidence with every transaction.</p>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="cloud-lightning"></i></div>
-          <h3>Storm Damage</h3>
-          <p>Wind and hail can destroy a roof without obvious signs. We inspect, photograph every issue, and walk you through your options &mdash; repair, claim, or full replacement.</p>
-          <a href="#contact" class="service-link">Get Started <i data-lucide="arrow-right"></i></a>
+        <div class="portal-card reveal">
+          <div class="portal-card-icon"><i data-lucide="trending-up"></i></div>
+          <h3>Cash Flow Acceleration</h3>
+          <p>Offer your clients a simple way to settle invoices online with multiple payment options. Automate invoicing, send notifications, and accelerate payment cycles with our seamless payment portal.</p>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="home"></i></div>
-          <h3>Roof Replacement</h3>
-          <p>Full residential and commercial roof replacements using premium Owens Corning shingles, EPDM, and TPO systems &mdash; backed by the industry's best warranty options.</p>
-          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        <div class="portal-card reveal">
+          <div class="portal-card-icon"><i data-lucide="eye"></i></div>
+          <h3>Enhanced Transparency and Credibility</h3>
+          <p>Have access to real time data to make faster and more accurate decisions, maintaining trust within your firm and with your clients.</p>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="wrench"></i></div>
-          <h3>Roof Repairs</h3>
-          <p>Leaks, missing shingles, damaged flashing, weatherproofing &mdash; our repair crews diagnose and fix the problem right the first time, residential or commercial.</p>
-          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="droplets"></i></div>
-          <h3>Gutters &amp; Downspouts</h3>
-          <p>Seamless gutter installation, repair, and replacement. We protect your foundation and landscaping from water damage every season. Same-day jobs available.</p>
-          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="layers"></i></div>
-          <h3>Siding Installation &amp; Repair</h3>
-          <p>Transform your home's curb appeal and energy efficiency with expert siding installation and repair &mdash; durable, beautiful, and built to last Northeast Ohio winters.</p>
-          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="sun"></i></div>
-          <h3>Solar Panel Installation</h3>
-          <p>Integrate solar panels seamlessly into your new or existing roof system. Clean energy, long-term savings, and a contractor you already trust to do it right.</p>
-          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon"><i data-lucide="building"></i></div>
-          <h3>Commercial Roofing</h3>
-          <p>Leaky flat roof? We handle EPDM, TPO, and asphalt shingle projects for commercial properties of all sizes. Fast, professional, and code-compliant.</p>
-          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
-        </div>
+      </div>
+      <div class="portal-cta-block reveal">
+        <p>Rodina's Client Portal simplifies how firms manage invoices, documents, and payments, all in one secure, easy-to-use platform.</p>
+        <p>With automated reminders, role-based access, and enterprise-grade data protection, you reduce friction for your clients and accelerate cash flow for your firm.</p>
+        <p class="portal-tagline">Stop chasing payments. <strong>Start delivering a modern client experience.</strong></p>
+        <a href="#contact" class="btn btn-primary">Get a Demo</a>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual reveal">
-          <div class="about-img-wrap">
-            <!-- PLACEHOLDER: replace with a photo of Jared Lichtin or the Radiant Roofing crew -->
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Radiant Roofing crew in Northeast Ohio" />
-            <div class="about-badge-float">
-              <i data-lucide="award"></i>
-              <div><strong>Owens Corning</strong><span>Preferred Contractor</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="about-copy">
-          <p class="overline reveal">Why Radiant</p>
-          <h2 class="reveal">Radiant Roofing Is <em>Built Different</em></h2>
-          <p class="reveal">We understand the importance of having a reliable, strong roof overhead to protect your family. When your roofing is compromised, we want you to know you're in good hands with a professional team dedicated to restoring your safety and peace of mind. While many roofing companies push customers to make decisions &mdash; we're relaxed and cool as a cucumber. It's your house. We give you options so you can make the best decision for your home.</p>
-          <ul class="about-list">
-            <li class="reveal"><i data-lucide="check"></i> Dedicated project manager on every single install</li>
-            <li class="reveal"><i data-lucide="check"></i> Over-communicate every status update &mdash; no guessing games</li>
-            <li class="reveal"><i data-lucide="check"></i> 1,000+ insurance claims successfully filed</li>
-            <li class="reveal"><i data-lucide="check"></i> Up to $250,000 Directorii workmanship protection</li>
-            <li class="reveal"><i data-lucide="check"></i> Fully licensed, bonded &amp; insured in the state of Ohio</li>
-            <li class="reveal"><i data-lucide="check"></i> Residential and commercial expertise</li>
-          </ul>
-          <blockquote class="owner-quote reveal">
-            <p>"When you work with us, I guarantee our team will deliver you an amazing customer experience and exceed your expectations."</p>
-            <cite>&mdash; Jared Lichtin, Owner &mdash; Radiant Roofing</cite>
-          </blockquote>
-          <div class="about-creds reveal">
-            <a href="https://directorii.com/us/oh/bedford/radiant-roofing-and-solar-reviews-12478/?v=1" target="_blank" rel="noopener" class="cred-badge">
-              <i data-lucide="external-link"></i>
-              View Us on Directorii
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="section process-section">
+  <!-- WHY RODINA -->
+  <section class="section why-section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="overline">How It Works</p>
-        <h2>Four Steps to a <em>Perfect Roof</em></h2>
+        <p class="overline">Why RODINA?</p>
+        <h2>Built for <em>Professional Service Firms.</em></h2>
       </div>
-      <div class="process-grid">
-        <div class="process-step reveal">
-          <div class="step-num">01</div>
-          <h3>Free Inspection</h3>
-          <p>We come to your property, inspect your roof, and show you photos of every issue we find. Honest, detailed, no pressure.</p>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-num">01</div>
+          <div class="why-icon"><i data-lucide="lock"></i></div>
+          <h3>Enterprise-Grade Security</h3>
+          <p>Role-based access and enterprise-grade data protection so sensitive information stays protected at every level.</p>
         </div>
-        <div class="process-step reveal">
-          <div class="step-num">02</div>
-          <h3>Your Options</h3>
-          <p>We give you options: repair, file an insurance claim, or full replacement. We never push. It's your house &mdash; you decide.</p>
+        <div class="why-item reveal">
+          <div class="why-num">02</div>
+          <div class="why-icon"><i data-lucide="bell"></i></div>
+          <h3>Automated Reminders</h3>
+          <p>Stop chasing down clients. Automated notifications keep your pipeline moving and your receivables current.</p>
         </div>
-        <div class="process-step reveal">
-          <div class="step-num">03</div>
-          <h3>Seamless Install</h3>
-          <p>Your dedicated project manager is on-site for every install. Clean, fast crews that respect your home and your neighbors.</p>
+        <div class="why-item reveal">
+          <div class="why-num">03</div>
+          <div class="why-icon"><i data-lucide="credit-card"></i></div>
+          <h3>Multiple Payment Options</h3>
+          <p>Give clients the flexibility to pay how they prefer. More options means faster collections and better client satisfaction.</p>
         </div>
-        <div class="process-step reveal">
-          <div class="step-num">04</div>
-          <h3>Lasting Relationship</h3>
-          <p>Our relationship isn't just about install day. It's about the time leading up to it and the relationship remaining after it.</p>
+        <div class="why-item reveal">
+          <div class="why-num">04</div>
+          <div class="why-icon"><i data-lucide="bar-chart-2"></i></div>
+          <h3>Real-Time Data</h3>
+          <p>Make faster, more accurate decisions with live dashboard data. Maintain trust within your firm and with your clients.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CREDENTIALS -->
-  <section class="section credentials-section">
+  <!-- INDUSTRIES -->
+  <section class="section industries-section" id="industries">
     <div class="container">
       <div class="section-head reveal">
-        <p class="overline">Our Credentials</p>
-        <h2>We've Got the <em>Credentials.</em></h2>
-        <p class="section-sub">It's not just our expertise our clients rely on &mdash; they want to know we're covered, certified, and credentialed to protect them.</p>
+        <p class="overline">Industry Expertise in Professional Services</p>
+        <h2>Learn how we can <em>help your business</em></h2>
       </div>
-      <div class="creds-grid">
-        <div class="cred-card reveal">
-          <div class="cred-icon"><i data-lucide="shield-check"></i></div>
-          <h3>Licensed, Bonded &amp; Insured</h3>
-          <p>Fully licensed roofing contractor in the state of Ohio. We carry full liability insurance and workers' comp so you're protected on every job.</p>
+      <div class="industries-grid">
+        <div class="industry-card reveal">
+          <div class="ind-icon"><i data-lucide="cpu"></i></div>
+          <h3>Technology</h3>
+          <p>Streamline billing and client document workflows for tech firms and SaaS consultancies with automated portals built for scale.</p>
+          <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
         </div>
-        <div class="cred-card reveal">
-          <div class="cred-icon"><i data-lucide="award"></i></div>
-          <h3>Owens Corning Preferred Contractor</h3>
-          <p>Owens Corning awards this status to a select group of professionals who have set themselves apart with their professionalism, customer service, and craftsmanship. You get the industry's best warranty options.</p>
+        <div class="industry-card reveal">
+          <div class="ind-icon"><i data-lucide="calculator"></i></div>
+          <h3>Accounting Firms</h3>
+          <p>From Top 50 firms to boutique practices, Rodina's portal fits the way accountants work. Secure document sharing, invoice management, and fast collections.</p>
+          <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
         </div>
-        <div class="cred-card reveal">
-          <div class="cred-icon"><i data-lucide="check-circle"></i></div>
-          <h3>Directorii Approved</h3>
-          <p>Directorii only lists contractors with a high Google rating. Register your project for free and receive up to $250,000 of protection against workmanship issues, code violations, and more &mdash; beyond our labor warranty.</p>
-          <a href="https://directorii.com/us/oh/bedford/radiant-roofing-and-solar-reviews-12478/?v=1" target="_blank" rel="noopener" class="service-link" style="margin-top:1rem;">View Directorii Profile <i data-lucide="arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINANCING -->
-  <section class="section financing-section" id="financing">
-    <div class="container">
-      <div class="financing-grid">
-        <div class="financing-copy">
-          <p class="overline reveal">Financing</p>
-          <h2 class="reveal">No Money Down. <em>No Payments</em> Until After Your Job Is Complete.</h2>
-          <p class="reveal">Most roofing companies offer short-term financing with high rates using free software that passes the fees to you. We do it differently. Starting as low as $99/mo with terms up to 12 years &mdash; our application partners you with 30 lenders so you can choose the best rate for your project.</p>
-          <ul class="financing-features">
-            <li class="reveal"><i data-lucide="zap"></i> Approvals in minutes with a soft credit pull only &mdash; no credit score impact</li>
-            <li class="reveal"><i data-lucide="credit-card"></i> $0 down &mdash; no payments until after your job is complete</li>
-            <li class="reveal"><i data-lucide="percent"></i> Rates starting at 6% &mdash; bank-level home improvement terms</li>
-            <li class="reveal"><i data-lucide="users"></i> 30 lenders competing for your business</li>
-            <li class="reveal"><i data-lucide="trending-up"></i> FICO scores as low as 550 accepted</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary reveal">See How Much You Qualify For &mdash; It's Free</a>
-        </div>
-        <div class="financing-card reveal">
-          <div class="f-card-inner">
-            <div class="f-card-icon"><i data-lucide="trending-down"></i></div>
-            <h3>Starting at</h3>
-            <div class="f-card-price">$99<span>/mo</span></div>
-            <ul>
-              <li><i data-lucide="check"></i> FICO 550+ accepted</li>
-              <li><i data-lucide="check"></i> Soft pull only &mdash; no credit impact</li>
-              <li><i data-lucide="check"></i> Terms up to 12 years</li>
-              <li><i data-lucide="check"></i> $0 down available</li>
-              <li><i data-lucide="check"></i> Rates starting at 6%</li>
-              <li><i data-lucide="check"></i> 30 lenders &mdash; best rate wins</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-block">Apply Now &mdash; No Stress</a>
-          </div>
+        <div class="industry-card reveal">
+          <div class="ind-icon"><i data-lucide="briefcase"></i></div>
+          <h3>Consulting</h3>
+          <p>Consulting firms need speed, professionalism, and discretion. Rodina delivers all three in a single client-facing portal your team will actually use.</p>
+          <a href="#contact" class="ind-link">Learn More <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="section reviews-section" id="reviews">
+  <!-- FEATURES -->
+  <section class="section features-section" id="features">
     <div class="container">
       <div class="section-head reveal">
-        <p class="overline">Google Reviews</p>
-        <h2>Real Neighbors. <em>Real Results.</em></h2>
-        <p class="section-sub">Based on 30 reviews &mdash; powered by Google. See what your Northeast Ohio neighbors are saying about us.</p>
+        <p class="overline">Platform Features</p>
+        <h2>Everything Your Firm <em>Needs. Nothing It Doesn't.</em></h2>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"I needed some gutters/downspouts replaced and Jared sent someone out who did the whole job in one day. Very clean work, respectful guys, and the gutters look and function perfectly. Highly recommended!"</p>
-          <div class="reviewer"><strong>Nick Wise</strong><span>July 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Jared worked with my insurance company and made sure I understood everything before me signing anything. They did a roof replacement and replaced a gutter. The crew was great &mdash; they started in the morning and were done early evening. They cleaned up so well, my yard and driveway looked better than when they started."</p>
-          <div class="reviewer"><strong>Dawna Patterson</strong><span>April 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Jared and his team did an impeccable job on my new roof. After completing the job it was like they were never there. Except for the beautiful new roof!"</p>
-          <div class="reviewer"><strong>Gewaunn Alexander</strong><span>May 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"I recently used Radiant Roofing to replace a part of the roof at my church. Not only were they competitively priced, Jared and his team were extremely professional and did an excellent job! True professionals!"</p>
-          <div class="reviewer"><strong>Meredith Bennington</strong><span>May 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Jared and his crew were amazing. From meeting for an estimate to wrapping up the job, Jared was involved in every step. Would definitely use Radiant Roofing again and will recommend them to anyone who needs roofing work."</p>
-          <div class="reviewer"><strong>Dean Nordstrom</strong><span>May 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"We have worked with Jared on multiple projects and he always delivers a quality job. He uses extremely professional contractors. Couldn't be happier. Thank you!"</p>
-          <div class="reviewer"><strong>Rachel Schindler</strong><span>May 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Fast response time for a complicated job, very knowledgeable, fair price, excellent follow-up. Highly recommend."</p>
-          <div class="reviewer"><strong>Edwardo Shoemaker</strong><span>June 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Extremely responsive. Reasonable, fair, and honest repair options. I highly recommend Jared and Radiant Roofing."</p>
-          <div class="reviewer"><strong>Adina Gwartzman</strong><span>June 2025</span></div>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Quality work. Personable and honest. Reliable and dependable. Very satisfied!"</p>
-          <div class="reviewer"><strong>Gary Steinberger</strong><span>June 2025</span></div>
-        </div>
-      </div>
-      <div class="reviews-cta reveal">
-        <a href="https://www.google.com/search?q=Radiant+Roofing+Bedford+Heights+OH+reviews" target="_blank" rel="noopener" class="btn btn-ghost">See All Reviews on Google <i data-lucide="external-link"></i></a>
+      <div class="features-grid">
+        <div class="feature-item reveal"><i data-lucide="file-text"></i><span>Invoice Management</span></div>
+        <div class="feature-item reveal"><i data-lucide="folder"></i><span>Document Storage</span></div>
+        <div class="feature-item reveal"><i data-lucide="credit-card"></i><span>Online Payments</span></div>
+        <div class="feature-item reveal"><i data-lucide="bell"></i><span>Automated Reminders</span></div>
+        <div class="feature-item reveal"><i data-lucide="shield"></i><span>Role-Based Access</span></div>
+        <div class="feature-item reveal"><i data-lucide="bar-chart-2"></i><span>Real-Time Dashboard</span></div>
+        <div class="feature-item reveal"><i data-lucide="mail"></i><span>Client Notifications</span></div>
+        <div class="feature-item reveal"><i data-lucide="lock"></i><span>Enterprise-Grade Encryption</span></div>
+        <div class="feature-item reveal"><i data-lucide="users"></i><span>Multi-User Portal</span></div>
+        <div class="feature-item reveal"><i data-lucide="zap"></i><span>Payment Cycle Automation</span></div>
+        <div class="feature-item reveal"><i data-lucide="activity"></i><span>Cash Flow Analytics</span></div>
+        <div class="feature-item reveal"><i data-lucide="settings"></i><span>Firm-Level Controls</span></div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICE AREA -->
-  <section class="section area-section">
+  <!-- DISCUSSIONS -->
+  <section class="section discussions-section" id="discussions">
     <div class="container">
       <div class="section-head reveal">
-        <p class="overline">Service Area</p>
-        <h2>We'll Come to <em>You</em> Anywhere in NE Ohio</h2>
-        <p class="section-sub">Our office is in Bedford Heights, but we offer roofing, gutter, and siding services for property owners anywhere in Northeast Ohio.</p>
+        <p class="overline">Featured Discussions</p>
+        <h2>Insights for <em>Modern Firms.</em></h2>
       </div>
-      <div class="counties-grid">
-        <div class="county reveal"><i data-lucide="map-pin"></i> Cuyahoga</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> Summit</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> Geauga</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> Lake</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> Lorain</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> Medina</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> Portage</div>
-        <div class="county reveal"><i data-lucide="map-pin"></i> &amp; Beyond</div>
+      <div class="discussions-grid">
+        <div class="discussion-card reveal">
+          <div class="disc-tag">Accounting Firms</div>
+          <h3>Why Top Accounting Firms Are Moving to Client Portals</h3>
+          <p>The shift from email-based workflows to unified portals is accelerating. Here is why CFOs at leading firms are making the switch now.</p>
+          <a href="#contact" class="disc-link">Read More <i data-lucide="arrow-right"></i></a>
+        </div>
+        <div class="discussion-card reveal">
+          <div class="disc-tag">Technology</div>
+          <h3>Automating Cash Flow: The PSA Advantage for Tech Consultancies</h3>
+          <p>Professional Service Automation is changing how technology firms manage billing, documents, and client relationships at scale.</p>
+          <a href="#contact" class="disc-link">Read More <i data-lucide="arrow-right"></i></a>
+        </div>
+        <div class="discussion-card reveal">
+          <div class="disc-tag">Consulting</div>
+          <h3>Client Experience as a Competitive Moat in Consulting</h3>
+          <p>Firms that prioritize the client payment experience are winning more referrals, retaining clients longer, and growing faster.</p>
+          <a href="#contact" class="disc-link">Read More <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section events-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="overline">Upcoming Events</p>
+        <h2>Stay <em>Connected.</em></h2>
+      </div>
+      <div class="events-empty reveal">
+        <div class="events-empty-icon"><i data-lucide="calendar"></i></div>
+        <p>No events at the moment. Check back soon or reach out to get on our invite list.</p>
+        <a href="#contact" class="btn btn-ghost">Get on the List</a>
       </div>
     </div>
   </section>
@@ -390,29 +309,20 @@
       <div class="contact-grid">
         <div class="contact-copy">
           <p class="overline reveal">Get Started</p>
-          <h2 class="reveal">Schedule Your <em>Free Inspection</em></h2>
-          <p class="reveal">No pressure. No obligation. Just an honest look at your roof by a professional who actually cares. We'll show you photos of every issue we find and walk you through your options &mdash; repair, insurance claim, or full replacement.</p>
-          <div class="contact-info reveal">
-            <a href="tel:+12163001953" class="contact-item">
-              <i data-lucide="phone"></i><span>(216) 300-1953</span>
-            </a>
-            <a href="mailto:info@1radroof.com" class="contact-item">
-              <i data-lucide="mail"></i><span>info@1radroof.com</span>
-            </a>
-            <div class="contact-item">
-              <i data-lucide="map-pin"></i><span>Bedford Heights, OH &mdash; serving all of Northeast Ohio</span>
-            </div>
-            <a href="https://directorii.com/us/oh/bedford/radiant-roofing-and-solar-reviews-12478/?v=1" target="_blank" rel="noopener" class="contact-item">
-              <i data-lucide="external-link"></i><span>View Us on Directorii</span>
-            </a>
+          <h2 class="reveal">Ready to <em>Modernize Your Firm?</em></h2>
+          <p class="reveal">See the Rodina Client Portal in action. We will walk you through how it fits your firm's workflow, answer every question, and help you get set up fast.</p>
+          <div class="contact-features reveal">
+            <div class="cf-item"><i data-lucide="check-circle"></i><span>Personalized demo for your firm</span></div>
+            <div class="cf-item"><i data-lucide="check-circle"></i><span>No long-term commitments required</span></div>
+            <div class="cf-item"><i data-lucide="check-circle"></i><span>Setup support included</span></div>
+            <div class="cf-item"><i data-lucide="check-circle"></i><span>Enterprise-grade from day one</span></div>
           </div>
         </div>
-        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
-          <!-- PLACEHOLDER: Replace Formspree action URL with your actual Formspree endpoint -->
+        <form class="contact-form reveal" id="contactForm">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="first_name" placeholder="John" required />
+              <input type="text" id="fname" name="first_name" placeholder="Jane" required />
             </div>
             <div class="form-group">
               <label for="lname">Last Name</label>
@@ -420,38 +330,34 @@
             </div>
           </div>
           <div class="form-group">
+            <label for="company">Firm / Company</label>
+            <input type="text" id="company" name="company" placeholder="Smith &amp; Associates CPAs" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@yourfirm.com" required />
+          </div>
+          <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(216) 555-0100" required />
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="service">Service Needed</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service...</option>
-              <option>Insurance Claim Assistance</option>
-              <option>Storm Damage Assessment</option>
-              <option>Roof Replacement</option>
-              <option>Roof Repair / Weatherproofing</option>
-              <option>Gutters &amp; Downspouts</option>
-              <option>Siding Installation or Repair</option>
-              <option>Solar Panel Installation</option>
-              <option>Commercial Roofing</option>
-              <option>Financing Inquiry</option>
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry" required>
+              <option value="" disabled selected>Select your industry...</option>
+              <option>Accounting Firm</option>
+              <option>Technology / SaaS</option>
+              <option>Consulting</option>
+              <option>Legal Services</option>
+              <option>Other Professional Services</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="address">Property Address (Optional)</label>
-            <input type="text" id="address" name="address" placeholder="123 Main St, Bedford Heights, OH" />
+            <label for="message">Tell Us About Your Firm (Optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Team size, current workflow challenges, what you are looking for..."></textarea>
           </div>
-          <div class="form-group">
-            <label for="message">Tell Us More (Optional)</label>
-            <textarea id="message" name="message" rows="3" placeholder="Any additional details about your roof or project..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block btn-lg">Request Free Inspection <i data-lucide="arrow-right"></i></button>
-          <p class="form-disclaimer">We'll reach out within 24 hours. 100% transparency, no spam, ever.</p>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Request a Demo <i data-lucide="arrow-right"></i></button>
+          <p class="form-disclaimer">We will follow up within 24 hours. No spam, no pressure.</p>
         </form>
       </div>
     </div>
@@ -463,57 +369,48 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="nav-logo">
-            <span class="logo-icon"><i data-lucide="home"></i></span>
-            <span class="logo-text">Radiant <em>Roofing</em></span>
+            <span class="logo-icon"><i data-lucide="layers"></i></span>
+            <span class="logo-text">RODINA<em>.</em></span>
           </a>
-          <p>Northeast Ohio's trusted roofing experts. Licensed, bonded, insured &mdash; and obsessed with your experience. Based in Bedford Heights, OH.</p>
+          <p>PSA Professional Service Automation Consultants. One shared portal for you and your clients.</p>
           <div class="footer-socials">
-            <!-- PLACEHOLDER: Replace # with actual social media URLs -->
-            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-            <a href="https://www.google.com/search?q=Radiant+Roofing+Bedford+Heights+OH+reviews" target="_blank" rel="noopener" aria-label="Google Reviews"><i data-lucide="star"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Portal</h4>
           <ul>
-            <li><a href="#services">Insurance Claims</a></li>
-            <li><a href="#services">Storm Damage</a></li>
-            <li><a href="#services">Roof Replacement</a></li>
-            <li><a href="#services">Roof Repairs</a></li>
-            <li><a href="#services">Gutters &amp; Downspouts</a></li>
-            <li><a href="#services">Siding</a></li>
-            <li><a href="#services">Solar Installation</a></li>
-            <li><a href="#services">Commercial Roofing</a></li>
+            <li><a href="#portal">Client Experience</a></li>
+            <li><a href="#portal">Cash Flow Acceleration</a></li>
+            <li><a href="#portal">Transparency &amp; Credibility</a></li>
+            <li><a href="#features">Platform Features</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="#industries">Technology</a></li>
+            <li><a href="#industries">Accounting Firms</a></li>
+            <li><a href="#industries">Consulting</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#financing">Financing</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="https://directorii.com/us/oh/bedford/radiant-roofing-and-solar-reviews-12478/?v=1" target="_blank" rel="noopener">Directorii Profile</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="tel:+12163001953">(216) 300-1953</a></li>
-            <li><a href="mailto:info@1radroof.com">info@1radroof.com</a></li>
-            <li>Bedford Heights, OH</li>
-            <li>Serving all of NE Ohio</li>
+            <li><a href="#discussions">Featured Discussions</a></li>
+            <li><a href="#contact">Request a Demo</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Radiant Roofing. All rights reserved.</p>
-        <p>Owens Corning Preferred Contractor &nbsp;|&nbsp; Directorii Approved &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
+        <p>&copy; 2026 Rodina Consulting. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
       </div>
     </div>
   </footer>
 
-  <a href="#contact" class="fab-cta" aria-label="Schedule free inspection">
+  <a href="#contact" class="fab-cta" aria-label="Request a demo">
     <i data-lucide="calendar-check"></i>
   </a>
 
